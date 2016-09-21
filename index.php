@@ -61,7 +61,7 @@
 	echo "<a href='?page=prismaSegitiga'>hitung PrismaSegitiga </a>";
 	echo "</br>";
 	echo "<a href='?page=tabung'>hitung Tabung </a>";
-     function TampilkanFormA()
+     function FormAritmatika()
 	  {
 	    echo '<form method="POST">';
 	    echo '<input type="text" name="x"> &nbsp;';
@@ -198,10 +198,12 @@
     }
     if (isset($_GET["page"])&&$_GET!=="") {
 	  $page=$_GET['page'];
-	  if ($page==="aritmatika") {
+	  $fn='Form'.$page;
+	  $fn();
+	  /*if ($page==="aritmatika") {
 	  	TampilkanFormA();
-	  	} elseif ($page==="persegi") {
-	    FormPersegi();
+	  	}elseif ($page==="persegi") {
+	    $fn();
 	    }elseif ($page==="segitiga") {
 	    FormSegitiga();
 	    }elseif ($page==="lingkaran") {
@@ -224,7 +226,7 @@
 	    FormPrismaSegitiga();
 	    }elseif ($page==="tabung") {
 	    FormTabung();
-	    }
+	    }*/
 	}
 	if (isset($_POST["proses"])) {
 	  $x = $_POST['x'];
