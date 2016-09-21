@@ -82,8 +82,7 @@ class BangunDuaDimensi{
         echo "</br>";
         echo 'Hitung Luas Persegi </br>';
         echo '<form method="POST">';
-        echo 'Panjang :<input type="text" name="panjang"> &nbsp;';
-        echo 'Lebar :<input type="text" name="lebar"> &nbsp;';
+        echo 'Sisi :<input type="text" name="sisi"> &nbsp;';
         echo '<label>=</label> &nbsp;';
         echo '<input type="submit" name="luasPersegi" value="Hitung Luas">';
         echo '</form>';
@@ -213,9 +212,8 @@ if (isset($_POST["proses"])) {
     echo "Hasil ".$x." / ".$y." = ".$data->Bagi($x, $y)."<br /><br />";
   }
 }elseif (isset($_POST["luasPersegi"])) {
-  $panjang=$_POST['panjang'];
-  $lebar=$_POST['lebar'];
-  echo "Luas Persegi :".$data2->Persegi($panjang,$lebar);
+  $sisi=$_POST['sisi'];
+  echo "Luas Persegi :".$data2->Persegi($sisi);
 }elseif (isset($_POST["luasSegitiga"])) {
   $alas=$_POST['alas'];
   $tinggi=$_POST['tinggi'];
